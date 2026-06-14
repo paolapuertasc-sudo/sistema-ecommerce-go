@@ -1,7 +1,19 @@
+# Binarios generados por Go
 *.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Archivos de prueba y cobertura
+*.test
 *.out
-/tmp/
+coverage.txt
+
+# Carpetas temporales
+/tmp
+/temp
+
+# Configuración de editores
 .vscode/
 .idea/
-.DS_Store
-Thumbs.db
