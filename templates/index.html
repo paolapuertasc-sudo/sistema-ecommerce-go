@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema E-commerce Go</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <span class="badge">Proyecto Integrador</span>
+      <h1>Sistema de Gestión de E-commerce</h1>
+      
+    </div>
+   
+  </header>
+
+  <main class="container">
+    <section class="grid stats">
+      <article><strong id="totalProductos">0</strong><span>Productos</span></article>
+      <article><strong id="totalClientes">0</strong><span>Clientes</span></article>
+      <article><strong id="totalPedidos">0</strong><span>Pedidos</span></article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Registrar producto</h2>
+        <p>Agrega productos al catálogo del e-commerce.</p>
+      </div>
+      <form id="productoForm" class="form-grid">
+        <input id="productoNombre" placeholder="Nombre del producto" required>
+        <input id="productoPrecio" type="number" step="0.01" min="0" placeholder="Precio" required>
+        <input id="productoStock" type="number" min="0" placeholder="Stock" required>
+        <button type="submit">Guardar producto</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Productos</h2>
+        <p>Catálogo actualizado con stock disponible.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>ID</th><th>Producto</th><th>Precio</th><th>Stock</th></tr></thead>
+          <tbody id="productosTabla"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Registrar cliente</h2>
+        <p>Guarda clientes para asociarlos a los pedidos.</p>
+      </div>
+      <form id="clienteForm" class="form-grid two">
+        <input id="clienteNombre" placeholder="Nombre del cliente" required>
+        <input id="clienteCorreo" type="email" placeholder="correo@example.com" required>
+        <button type="submit">Guardar cliente</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Clientes</h2>
+        <p>Listado de clientes registrados.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>ID</th><th>Cliente</th><th>Correo</th></tr></thead>
+          <tbody id="clientesTabla"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel highlight">
+      <div class="panel-head">
+        <h2>Crear pedido</h2>
+        <p>Selecciona un cliente, producto y cantidad para generar una venta.</p>
+      </div>
+      <form id="pedidoForm" class="form-grid">
+        <select id="pedidoCliente" required></select>
+        <select id="pedidoProducto" required></select>
+        <input id="pedidoCantidad" type="number" min="1" placeholder="Cantidad" required>
+        <button type="submit">Crear pedido</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Historial de pedidos</h2>
+        <p>Ventas generadas durante la ejecución del sistema.</p>
+      </div>
+      <div id="pedidosLista" class="orders"></div>
+    </section>
+
+    
+  </main>
+
+  <div id="toast" class="toast"></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

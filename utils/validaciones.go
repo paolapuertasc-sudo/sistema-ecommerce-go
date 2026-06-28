@@ -44,10 +44,8 @@ func ValidarCorreo(correo string) error {
 	if err := ValidarTextoNoVacio("correo", correo); err != nil {
 		return err
 	}
-
 	if !strings.Contains(correo, "@") || !strings.Contains(correo, ".") {
 		return errors.New("el correo ingresado no tiene un formato válido")
 	}
-
 	return nil
 }

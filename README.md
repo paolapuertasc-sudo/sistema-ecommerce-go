@@ -1,74 +1,61 @@
 # Sistema de Gestión de E-commerce en Go
 
-Proyecto académico desarrollado en Golang para gestionar productos, clientes y pedidos de una tienda virtual básica.
+## Descripción
 
-## Funcionalidades principales
+Sistema de Gestión de e-commerce desarrollado en Go. La versión final incluye una página web visual y una API REST con serialización JSON.
 
-- Menú interactivo por consola.
-- Registro de productos.
-- Listado de productos.
-- Registro de clientes.
-- Listado de clientes.
-- Creación de pedidos.
-- Validación de stock.
-- Cálculo de subtotal, IVA y total.
-- Historial de pedidos.
+## Objetivo
 
-## Conceptos aplicados
+Administrar productos, clientes y pedidos de un e-commerce básico, integrando conocimientos de programación funcional, estructuras, paquetes, encapsulación, interfaces, manejo de errores, servicios web y JSON.
 
-- Encapsulación mediante atributos privados y métodos públicos.
-- Manejo de errores con el tipo `error`.
-- Interfaces para definir comportamientos de productos, clientes y pedidos.
-- Comentarios en funcionalidades relevantes.
-- Organización por paquetes.
-- Enfoque funcional en funciones que reciben datos y devuelven resultados.
+## Tecnologías
 
-## Estructura del proyecto
-
-```txt
-sistema-ecommerce-go-v2/
-├── go.mod
-├── main.go
-├── models/
-│   ├── producto.go
-│   ├── cliente.go
-│   └── pedido.go
-├── services/
-│   ├── producto_service.go
-│   ├── cliente_service.go
-│   └── pedido_service.go
-├── interfaces/
-│   └── interfaces.go
-└── utils/
-    └── validaciones.go
-```
+- Go / Golang
+- HTML
+- CSS
+- JavaScript
+- Servicios Web REST
+- JSON
+- Git y GitHub
 
 ## Ejecución
-
-Desde la carpeta principal del proyecto ejecutar:
 
 ```bash
 go run .
 ```
 
-Opcionalmente se puede formatear el código con:
-
-```bash
-gofmt -w .
-```
-
-## Menú del sistema
+Abrir en el navegador:
 
 ```txt
-====================================
-    SISTEMA DE GESTIÓN E-COMMERCE
-====================================
-1. Registrar producto
-2. Listar productos
-3. Registrar cliente
-4. Listar clientes
-5. Crear pedido
-6. Ver historial de pedidos
-7. Salir
-====================================
+http://localhost:8080
 ```
+
+## API JSON
+
+| Método | Endpoint | Funcionalidad |
+|---|---|---|
+| GET | `/api/productos` | Lista productos |
+| POST | `/api/productos` | Registra producto |
+| GET | `/api/productos/{id}` | Consulta producto por ID |
+| GET | `/api/clientes` | Lista clientes |
+| POST | `/api/clientes` | Registra cliente |
+| GET | `/api/clientes/{id}` | Consulta cliente por ID |
+| GET | `/api/pedidos` | Lista pedidos |
+| POST | `/api/pedidos` | Crea pedido |
+
+## Funcionalidades visuales
+
+- Panel principal con conteos de productos, clientes y pedidos.
+- Formulario para registrar productos.
+- Tabla de productos.
+- Formulario para registrar clientes.
+- Tabla de clientes.
+- Formulario para crear pedidos.
+- Historial visual de pedidos.
+
+## Integrantes
+
+- Paola Puertas
+- [Integrante 2]
+- [Integrante 3]
+- [Integrante 4]
